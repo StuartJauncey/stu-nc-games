@@ -1,0 +1,55 @@
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  background: antiquewhite;
+}
+
+.review-card {
+  height: 300px;
+  width: 400px;
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 15% 40% 15% 15% 15%;
+  grid-template-areas: 
+    "title creator"
+    "image body"
+    "image votes"
+    "image comment-count"
+    "image date"
+}
+
+.review-title {
+  grid-area: title;
+}
+
+.review-creator {
+  grid-area: creator;
+}
+
+.review-image {
+  grid-area: image;
+  height: 150px;
+  width: 150px;
+}
+
+.review-body {
+  font-size: 10px;
+  grid-area: body;
+}
+
+.review-votes {
+  grid-area: votes;
+}
+
+.review-comment-count {
+  grid-area: comment-count;
+}
+
+.review-date {
+  grid-area: date;
+}

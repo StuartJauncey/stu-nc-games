@@ -14,3 +14,11 @@ export const getCategories = () => {
     console.log(err);
   })
 }
+
+export const getReviews = () => {
+  return gamesAPI
+  .get("/reviews")
+  .then((res) => {
+    return res.data.reviews
+  })
+}

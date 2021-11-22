@@ -12,21 +12,21 @@ const CategoriesSelect = () => {
     })
   }, []);
 
-  console.log(categories);
-
   return (
-    <main>
+    <nav>
        <h2>Select a Category</h2>
        <ul className="categories">
         {categories.map(category => {
           return (
             <li key={category.slug} className="category">
-              {category.slug}
+              <button className="category-button">
+                {category.slug}
+              </button>
             </li>
           )
         })}
        </ul>
-    </main>
+    </nav>
   )
 }
 
