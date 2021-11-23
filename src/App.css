@@ -1,9 +1,28 @@
 body {
-  background-color: burlywood;
+  background-color: black;
+  color: white;
 }
 
 .App {
   margin: 0;
   padding: 0;
   text-align: center;
+}
+
+.main-title {
+  text-decoration: none;
+  color: white;
+}
+
+.username {
+  color: red;
+}
+
+.user-image {
+  height: 200px;
+  width: 200px;
+}
+
+.login-button {
+  background: blanchedalmond;
 }

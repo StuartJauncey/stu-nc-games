@@ -1,11 +1,9 @@
 .reviews {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
   list-style-type: none;
   padding: 0;
-  background: antiquewhite;
 }
 
 .review-card {
@@ -24,7 +22,7 @@
 }
 
 .review-card:hover {
-  background-color: darkgoldenrod;
+  background-color: tan;
 }
 
 .review-title {

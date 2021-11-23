@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const Title = () => {
   return (
-    <Link to="/">
-      <h1>Stu's NC Games</h1>
+    <Link className="main-title" to="/">
+      <h1 >Board Game Zone</h1>
     </Link>
   )
 }

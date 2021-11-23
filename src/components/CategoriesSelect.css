@@ -1,19 +1,25 @@
 .navbar {
-  height: 10vh;
-  background-color: cornsilk;
+  height: fit-content;
 }
 
 .categories {
+  height: 10vh;
   list-style-type: none;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .category-button {
+  margin: 5px;
   text-decoration: none;
   padding: 10px;
   background-color: lightblue;
+  color: black;
   border: solid 2px black;
+}
+
+.category-button:hover {
+  background-color: lightcyan;
 }
