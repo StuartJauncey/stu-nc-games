@@ -1,17 +1,23 @@
 import "./Reviews.css";
 import { useState, useEffect } from "react";
-import { getReviews } from "../utils";
+import { getReviews, getReviewsByCategory } from "../utils";
 import ReviewCard from "./ReviewCard";
 
-const Reviews = () => {
+const Reviews = ({ categorySelected }) => {
 
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    getReviews().then((receivedReviews) => {
-      setReviews(receivedReviews);
-    })
-  }, []);
+    if(categorySelected === "all") {
+      getReviews().then((receivedReviews) => {
+        setReviews(receivedReviews);
+      });
+    } else {
+      getReviewsByCategory(categorySelected).then((receivedReviews) => {
+        setReviews(receivedReviews);
+      });
+    }
+  }, [categorySelected]);
 
   return (
     <main>

@@ -23,6 +23,10 @@
     "image date"
 }
 
+.review-card:hover {
+  background-color: darkgoldenrod;
+}
+
 .review-title {
   grid-area: title;
 }

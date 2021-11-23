@@ -22,3 +22,11 @@ export const getReviews = () => {
     return res.data.reviews
   })
 }
+
+export const getReviewsByCategory = (category) => {
+  return gamesAPI
+  .get(`/reviews/?category=${category}`)
+  .then((res) => {
+    return res.data.reviews
+  })
+}

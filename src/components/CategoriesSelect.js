@@ -1,8 +1,9 @@
 import "./CategoriesSelect.css";
 import { useEffect, useState } from "react";
 import { getCategories } from "../utils";
+import { Link } from "react-router-dom";
 
-const CategoriesSelect = () => {
+const CategoriesSelect = ({ setCategorySelected }) => {
 
   const [categories, setCategories] = useState([]);
 
@@ -13,15 +14,18 @@ const CategoriesSelect = () => {
   }, []);
 
   return (
-    <nav>
+    <nav className="navbar">
        <h2>Select a Category</h2>
        <ul className="categories">
         {categories.map(category => {
           return (
             <li key={category.slug} className="category">
-              <button className="category-button">
+              <Link to={`/category/${category.slug}`} className="category-button"
+                    onClick={() => {
+                      setCategorySelected(category.slug);
+                    }}>
                 {category.slug}
-              </button>
+              </Link>
             </li>
           )
         })}

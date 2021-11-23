@@ -1,4 +1,19 @@
+.navbar {
+  height: 10vh;
+  background-color: cornsilk;
+}
+
 .categories {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.category-button {
+  text-decoration: none;
+  padding: 10px;
+  background-color: lightblue;
+  border: solid 2px black;
 }
