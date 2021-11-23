@@ -14,13 +14,13 @@
   border: 2px solid black;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 15% 40% 15% 15% 15%;
+  grid-template-rows: 20% 30% 17% 17% 17%;
   grid-template-areas: 
     "title creator"
     "image body"
     "image votes"
     "image comment-count"
-    "image date"
+    "image date";
 }
 
 .review-card:hover {
@@ -37,17 +37,21 @@
 
 .review-image {
   grid-area: image;
+  border: solid black 1px;
   height: 150px;
   width: 150px;
+  justify-self: center;
+  align-self: center;
 }
 
 .review-body {
-  font-size: 10px;
+  font-size: 12px;
   grid-area: body;
 }
 
 .review-votes {
   grid-area: votes;
+  font-size: 14px;
 }
 
 .review-comment-count {
@@ -56,4 +60,5 @@
 
 .review-date {
   grid-area: date;
+  font-size: 14px;
 }

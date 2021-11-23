@@ -30,3 +30,19 @@ export const getReviewsByCategory = (category) => {
     return res.data.reviews
   })
 }
+
+export const getReviewById = (id) => {
+  return gamesAPI
+  .get(`/reviews/${id}`)
+  .then((res) => {
+    return res.data.review
+  })
+}
+
+export const getCommentsByReviewId = (id) => {
+  return gamesAPI
+  .get(`/reviews/${id}/comments`)
+  .then((res) => {
+    return res.data.comments
+  })
+}
