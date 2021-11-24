@@ -4,8 +4,8 @@ export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState({
-    username: "Arnie J",
-    img_url: "https://res.cloudinary.com/stuj89/image/upload/v1541934524/Arnold_J_Rimmer.jpg"
+    username: "weegembump",
+    img_url: "https://vignette.wikia.nocookie.net/mrmen/images/7/7e/MrMen-Bump.png/revision/latest?cb=20180123225553"
   });
 
   return (

@@ -1,6 +1,7 @@
 body {
   background-color: black;
   color: white;
+  font-family: News Cycle;
 }
 
 .App {
@@ -14,6 +15,16 @@ body {
   color: white;
 }
 
+.user-profile {
+  background-color: burlywood;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  margin: auto;
+}
+
 .username {
   color: red;
 }
@@ -21,8 +32,14 @@ body {
 .user-image {
   height: 200px;
   width: 200px;
+  justify-self: center;
 }
 
 .login-button {
-  background: blanchedalmond;
+  background: rgb(125, 161, 202);
+}
+
+.link {
+  text-decoration: none;
+  color: black;
 }
