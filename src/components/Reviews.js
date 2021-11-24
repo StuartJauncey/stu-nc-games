@@ -8,7 +8,11 @@ const Reviews = () => {
 
   const [reviews, setReviews] = useState([]);
 
-  const { category } = useParams();
+  let { category } = useParams();
+
+  if (category === "all") {
+    category = null;
+  }
 
   useEffect(() => {
     getReviews(category)

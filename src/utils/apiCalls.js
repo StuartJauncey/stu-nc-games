@@ -54,3 +54,11 @@ export const patchLikesByReviewId = (id, voteChange) => {
     return res.data.review
   })
 }
+
+export const postCommentByReviewId = (id, username, body) => {
+  return gamesAPI
+  .post(`/reviews/${id}/comments`, { username, body })
+  .then((res) => {
+    return res.data.comment
+  })
+}

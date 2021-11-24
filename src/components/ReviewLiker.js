@@ -8,12 +8,12 @@ const ReviewLiker = ({ likes }) => {
 
   const handleClickAdd = () => {
     setLikeChange((prevLikes) => prevLikes + 1);
-    patchLikesByReviewId(likes, 1)
+    patchLikesByReviewId(likes, 1);
   }
 
   const handleClickDelete = () => {
     setLikeChange((prevLikes) => prevLikes - 1);
-    patchLikesByReviewId(likes, -1)
+    patchLikesByReviewId(likes, -1);
   }
 
   return (

@@ -18,8 +18,13 @@ const CategoriesSelect = () => {
     <nav className="navbar">
        <h2>Select a Category</h2>
        <ul className="categories">
-        {categories.map(category => {
-          return (
+          <button className="category-button">
+            <Link to={`/category/all`}>
+              All
+            </Link>
+          </button>
+          {categories.map(category => {
+            return (
             <li key={category.slug}>
               <button className="category-button">
                 <Link to={`/category/${category.slug}`}>

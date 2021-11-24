@@ -1,6 +1,6 @@
 .single-review {
   display: grid;
-  grid-template-rows: 150px 150px 150px 150px 20%;
+  grid-template-rows: 150px 150px 150px 150px 150px;
   grid-template-columns: 50% 50%;
   grid-template-areas: 
     "title body"
@@ -45,6 +45,10 @@
 
 .dislike-button {
   background-color: crimson;
+}
+
+.add-comment-form {
+  color: grey;
 }
 
 .single-review-comments {
