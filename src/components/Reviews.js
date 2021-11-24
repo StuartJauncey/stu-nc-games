@@ -1,23 +1,21 @@
 import "./Reviews.css";
 import { useState, useEffect } from "react";
-import { getReviews, getReviewsByCategory } from "../utils";
+import { getReviews } from "../utils/apiCalls";
+import { useParams } from "react-router-dom";
 import ReviewCard from "./ReviewCard";
 
-const Reviews = ({ categorySelected }) => {
+const Reviews = () => {
 
   const [reviews, setReviews] = useState([]);
 
+  const { category } = useParams();
+
   useEffect(() => {
-    if(categorySelected === "all") {
-      getReviews().then((receivedReviews) => {
+    getReviews(category)
+      .then((receivedReviews) => {
         setReviews(receivedReviews);
-      });
-    } else {
-      getReviewsByCategory(categorySelected).then((receivedReviews) => {
-        setReviews(receivedReviews);
-      });
-    }
-  }, [categorySelected]);
+      })
+  }, [category])
 
   return (
     <main>

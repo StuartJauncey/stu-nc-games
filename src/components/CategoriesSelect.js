@@ -1,9 +1,10 @@
 import "./CategoriesSelect.css";
 import { useEffect, useState } from "react";
-import { getCategories } from "../utils";
+import { getCategories } from "../utils/apiCalls";
 import { Link } from "react-router-dom";
+import categoryNameModifier from "../utils/functions/categoryNameModifier";
 
-const CategoriesSelect = ({ setCategorySelected }) => {
+const CategoriesSelect = () => {
 
   const [categories, setCategories] = useState([]);
 
@@ -13,15 +14,6 @@ const CategoriesSelect = ({ setCategorySelected }) => {
     })
   }, []);
 
-  const categoryNameModifier = (category) => {
-    const name = category;
-    const nameArr = name.split("-");
-    const capitalizedArr = nameArr.map((word) => {
-      return word.charAt(0).toUpperCase() + word.slice(1);
-    })
-    return capitalizedArr.join(" ");
-  }
-
   return (
     <nav className="navbar">
        <h2>Select a Category</h2>
@@ -30,10 +22,7 @@ const CategoriesSelect = ({ setCategorySelected }) => {
           return (
             <li key={category.slug}>
               <button className="category-button">
-                <Link to={`/category/${category.slug}`}
-                  onClick={() => {
-                    setCategorySelected(category.slug);
-                  }}>
+                <Link to={`/category/${category.slug}`}>
                   {categoryNameModifier(category.slug)}
                 </Link>
               </button>

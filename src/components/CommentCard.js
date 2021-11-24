@@ -6,7 +6,7 @@ const CommentCard = ({
   votes
 }) => {
   return(
-    <section>
+    <section className="comment-card">
       <h4>{author}</h4>
       <h4>{body}</h4>
       <h4>{created_at}</h4>

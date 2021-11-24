@@ -10,14 +10,13 @@ export const getCategories = () => {
   .then((res) => {
     return res.data.categories
   })
-  .catch((err) => {
-    console.log(err);
-  })
 }
 
-export const getReviews = () => {
+export const getReviews = (category) => {
   return gamesAPI
-  .get("/reviews")
+  .get("/reviews", {
+    params: { category }
+  })
   .then((res) => {
     return res.data.reviews
   })
@@ -44,5 +43,14 @@ export const getCommentsByReviewId = (id) => {
   .get(`/reviews/${id}/comments`)
   .then((res) => {
     return res.data.comments
+  })
+}
+
+export const patchLikesByReviewId = (id, voteChange) => {
+  return gamesAPI
+  .patch(`/reviews/${id}`, { inc_votes: voteChange })
+  .then((res) => {
+    console.log(res);
+    return res.data.review
   })
 }

@@ -1,3 +1,56 @@
+.single-review {
+  display: grid;
+  grid-template-rows: 150px 150px 150px 150px 20%;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: 
+    "title body"
+    "author body"
+    "image body"
+    "votes body"
+    "comments comments";
+  height: 100vh;
+  width: 100vw;
+}
+
+.single-review-title {
+  grid-area: title;
+}
+
+.single-review-owner {
+  grid-area: author;
+}
+
+.single-review-body {
+  grid-area: body;
+}
+
 .single-review-image {
-  width: 200px;
+  grid-area: image;
+  width: 100px;
+  height: 100px;
+}
+
+.single-review-votes {
+  grid-area: votes;
+}
+
+.likes-section {
+  display: grid;
+  justify-content: center;
+}
+
+.like-button {
+  background-color: chartreuse;
+}
+
+.dislike-button {
+  background-color: crimson;
+}
+
+.single-review-comments {
+  grid-area: comments;
+}
+
+.comment-card {
+  border: solid 1px black;
 }

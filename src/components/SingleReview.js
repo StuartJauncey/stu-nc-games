@@ -1,16 +1,14 @@
 import "./SingleReview.css"
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getCommentsByReviewId, getReviewById } from "../utils";
+import { getCommentsByReviewId, getReviewById } from "../utils/apiCalls";
 import CommentCard from "./CommentCard";
+import ReviewLiker from "./ReviewLiker";
 
 const SingleReview = () => {
 
   const { review_id } = useParams();
   const [comments, setComments] = useState([]);
-
-  console.log(review_id);
-
   const [review, setReview] = useState({});
 
   useEffect(() => {
@@ -25,19 +23,21 @@ const SingleReview = () => {
     })
   }, [review_id])
 
-  console.log(comments);
+  console.log(review.votes);
   const { title, owner, review_body, designer, review_img_url, votes, created_at } = review;
   
   return (
     <main className="single-review">
-      <h3>{title}</h3>
-      <h3>{owner}</h3>
-      <h3>{review_body}</h3>
-      <h3>{designer}</h3>
+      <h3 className="single-review-title">{title}</h3>
+      <h3 className="single-review-owner">{owner}</h3>
+      <h3 className="single-review-body">{review_body}</h3>
+      <h3 className="single-review-designer">{designer}</h3>
       <img className="single-review-image" src={review_img_url} alt={title} />
-      <h3>{votes}</h3>
-      <h3>{created_at}</h3>
-      <section>
+      <h3 className="single-review-votes">
+        <ReviewLiker likes={votes}/>
+      </h3>
+      <h3 className="single-review-date">{created_at}</h3>
+      <section className="single-review-comments">
         {comments.map((comment) => {
           return (
             <CommentCard key={comment.comment_id} {...comment} />
@@ -49,13 +49,3 @@ const SingleReview = () => {
 }
 
 export default SingleReview;
-
-// review_id,
-//   title,
-//   owner,
-//   review_body,
-//   designer,
-//   review_img_url,
-//   votes,
-//   created_at,
-//   comment_count
