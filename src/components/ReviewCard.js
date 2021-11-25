@@ -14,20 +14,19 @@ const ReviewCard = ({
 }) => {
 
   const reviewSnipper = (review) => {
-    return review.slice(0, 100) + "...";
+    return review.slice(0, 80) + "...";
   }
 
   return (
     <section className="review-card">
-      <h3 className="review-title">{title}</h3>
-      <h3 className="review-creator">{owner}</h3>
+      <h3 className="review-title">{title} <br/> by {owner}</h3>
       <img className="review-image" src={review_img_url} alt={title} />
       <Link className="link" to={`/reviews/${review_id}`}>
         <h4 className="review-body">{reviewSnipper(review_body)}</h4>
       </Link>
       <h3 className="review-votes">Rating: {votes}</h3>
-      <h3 className="review-comment-count">Comment Count: {comment_count}</h3>
-      <h3 className="review-date"> Created on: {dateModifier(created_at)}</h3>
+      <h3 className="review-comment-count">Comments: {comment_count}</h3>
+      <h3 className="review-date"> Date: {dateModifier(created_at)}</h3>
 
       
     </section>

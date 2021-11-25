@@ -1,3 +1,26 @@
+.sort-by-section {
+  display: grid;
+  grid-template-columns: 120px 120px 120px 120px;
+  margin: auto;
+  width: 480px;
+}
+
+.sort-by-button {
+  margin-top: 20px;
+  width: 110px;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
+  background-color: hsl(195, 93%, 79%, 90%);
+  color: black;
+  border: solid 2px black;
+  border-radius: 30px;
+}
+
+.sort-by-button:hover {
+  background-color: hsl(195, 93%, 89%, 100%);
+}
+
 .reviews {
   display: flex;
   flex-direction: column;
@@ -8,47 +31,50 @@
 }
 
 .review-card {
-  background-color: hsl(0, 0%, 75%, 80%);
+  background-color: hsl(0, 0%, 100%, 80%);
   color: black;
-  height: 240px;
+  height: 160px;
   width: 100%;
   border: 2px solid black;
   border-radius: 20px;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 80px 80px 80px;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 80px 80px;
   grid-template-areas: 
-    "title creator body image"
-    "date votes body image"
-    "date comment-count body image";
+    "title title title body image"
+    "date votes comment-count body image";
   margin: 10px 0;
+  padding: 3px 10px;
 }
 
 .review-title {
   grid-area: title;
   font-size: 20px;
   align-self: center;
+  padding: 5px;
+  margin: 5px;
 }
 
 .review-creator {
   grid-area: creator;
-  font-size: 20px;
   align-self: center;
+  padding: 5px;
+  margin: 5px;
 }
 
 .review-image {
   grid-area: image;
   height: 150px;
   width: 150px;
-  justify-self: center;
   align-self: center;
-  padding-top: 50px;
+  justify-self: center;
+  border-radius: 10px;
 }
 
 .review-body {
-  font-size: 18px;
+  margin-top: 20px;
+  font-size: medium;
   grid-area: body;
-  align-self: center;
 }
 
 .review-body:hover {
@@ -71,4 +97,49 @@
   grid-area: date;
   font-size: 20px;
   align-self: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .review-image {
+    display: none;
+  }
+  .review-card {
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 80px 80px;
+    grid-template-areas: 
+      "title title title body"
+      "date votes comment-count body";
+    margin: 10px 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .review-card {
+    height: 240px;
+    display: table;
+    margin: 10px 0;
+  }
+  .review-image {
+    display: block;
+    margin: auto;
+  }
+  .sort-by-section {
+    grid-template-columns: 105px 105px 105px 105px;
+    width: 420px;
+  }
+  .sort-by-button {
+    width: 100px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .review-body {
+    font-size: large;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .review-body {
+    font-size: larger;
+  }
 }

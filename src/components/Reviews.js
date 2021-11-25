@@ -23,11 +23,12 @@ const Reviews = () => {
 
   return (
     <main>
-      <h2>User Reviews</h2>
-      <h3>Sort by:</h3>
-      <Link to={`/reviews/category/${category}/created_at`}><button>Newest</button></Link>
-      <Link to={`/reviews/category/${category}/comment_count`}><button>Comment Count</button></Link>
-      <Link to={`/reviews/category/${category}/votes`}><button>Rating</button></Link>
+      <section className="sort-by-section">
+        <h2>Sort by:</h2>
+        <Link to={`/reviews/category/${category}/created_at`}><button className="sort-by-button">Newest</button></Link>
+        <Link to={`/reviews/category/${category}/comment_count`}><button className="sort-by-button">Comments</button></Link>
+        <Link to={`/reviews/category/${category}/votes`}><button className="sort-by-button">Rating</button></Link>
+      </section>
       <ul className="reviews">
         {reviews.map((review) => {
           return (

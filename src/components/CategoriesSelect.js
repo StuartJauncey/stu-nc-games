@@ -31,15 +31,15 @@ const CategoriesSelect = () => {
 
   return (
     <nav className="navbar">
-       <h2>Select a Category</h2>
+       <h2>Select a Review Category</h2>
        <ul className="categories">
-       <button className="all-category-button">
-            <Link className="link" to={`/reviews`}>
-              All
-            </Link>
-       </button>
-          {categories.map(category => {
-            return (
+        <button className="all-category-button">
+          <Link className="link" to={`/reviews`}>
+            All
+          </Link>
+        </button>
+        {categories.map(category => {
+          return (
             <li key={category.slug}>
               <button className="category-button">
                 <Link className="link" to={`/reviews/category/${category.slug}`}>
