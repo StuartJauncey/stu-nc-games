@@ -46,7 +46,7 @@ export const getCommentsByReviewId = (id) => {
   })
 }
 
-export const patchLikesByReviewId = (id, voteChange) => {
+export const patchRatingByReviewId = (id, voteChange) => {
   return gamesAPI
   .patch(`/reviews/${id}`, { inc_votes: voteChange })
   .then((res) => {

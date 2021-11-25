@@ -17,8 +17,14 @@
 }
 
 .all-category-button {
+  margin-left: 12px;
   height: 37px;
+  padding: 0 30px;
   align-self: center;
+  background-color: lightblue;
+  color: black;
+  border: solid 2px black;
+  border-radius: 30px;
 }
 
 .category-button {

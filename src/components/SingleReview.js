@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { getCommentsByReviewId, getReviewById, postCommentByReviewId } from "../utils/apiCalls";
 import { UserContext } from "../contexts/UserContext";
 import CommentCard from "./CommentCard";
-import ReviewLiker from "./ReviewLiker";
+import ReviewLiker from "./ReviewRater";
 
 const SingleReview = () => {
 
@@ -44,7 +44,7 @@ const SingleReview = () => {
       <h3 className="single-review-title">Review of {title} <br/> by {owner}</h3>
       <h3 className="single-review-body">{review_body}</h3>
       <h3 className="single-review-votes">
-        <ReviewLiker review_id={review_id} likes={votes}/>
+        <ReviewLiker review_id={review_id} rating={votes}/>
       </h3>
       <section className="single-review-comments">
         <form className="add-comment-form" onSubmit={handleSubmit}>

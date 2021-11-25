@@ -19,7 +19,7 @@ const CategoriesSelect = () => {
     <nav className="navbar">
        <div className="categories-header">
        <h2>Select a Category</h2>
-       <button className="category-button all-category-button">
+       <button className="all-category-button">
             <Link className="link" to={`/category/all`}>
               All
             </Link>
