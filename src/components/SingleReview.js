@@ -71,7 +71,7 @@ const SingleReview = () => {
             <CommentCard comments={comments} setComments={setComments} key={comment.comment_id} {...comment} />
           )
         })}
-        <form className="add-comment-form" onSubmit={handleSubmit}>
+        <form className="add-comment-form" onSubmit={handleSubmit} autoComplete="off">
           <label htmlFor="add-comment">Add Comment as {user.username} </label>
           <input id="add-comment" name="item-name" type="text" value={comment} onChange={handleChange} required/>
           <button type="submit">Add Comment</button>

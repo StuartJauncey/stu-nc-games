@@ -20,17 +20,16 @@ body {
 .main-title {
   text-decoration: none;
   color: white;
-  font-size: 22px;
+  font-size: 38px;
 }
 
 .main-title:hover {
   color: red;
-  font-size: 22.1px;
 }
 
 .page-description {
   margin: auto;
-  padding: 20px;
+  width: 80vw;
 }
 
 .user-profile {
@@ -77,4 +76,26 @@ body {
 .link {
   text-decoration: none;
   color: black;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .main-title {
+    font-size: 26px;
+  }
+  .page-description {
+    font-size: 18px;
+  }
+  .user-profile {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+  }
+  .user-image {
+    width: 50%;
+    grid-area: picture;
+    margin: 10px auto;
+    border-radius: 30px;
+  }
 }

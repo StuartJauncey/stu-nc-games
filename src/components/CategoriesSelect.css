@@ -1,34 +1,34 @@
 .navbar {
-  height: fit-content;
+  height: 150px;
+  width: 600px;
+  margin: auto;
 }
 
 .categories {
-  height: 10vh;
   list-style-type: none;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.categories-header {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
 }
 
 .all-category-button {
-  margin-left: 12px;
-  height: 37px;
-  padding: 0 30px;
-  align-self: center;
+  height: 40px;
+  margin: 5px 5px 0 5px;
+  width: 140px;
+  padding: 10px;
   background-color: lightblue;
   color: black;
   border: solid 2px black;
   border-radius: 30px;
 }
 
+.all-category-button:hover {
+  background-color: lightcyan;
+}
+
 .category-button {
-  margin: auto 2px;
+  margin: 5px;
+  width: 140px;
   text-decoration: none;
   padding: 10px;
   background-color: lightblue;
