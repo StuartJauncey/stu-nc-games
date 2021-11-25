@@ -1,4 +1,4 @@
-import "./CategoriesSelect.css";
+import "../css/CategoriesSelect.css";
 import { useEffect, useState } from "react";
 import { getCategories } from "../utils/apiCalls";
 import { Link } from "react-router-dom";
@@ -34,7 +34,7 @@ const CategoriesSelect = () => {
        <h2>Select a Category</h2>
        <ul className="categories">
        <button className="all-category-button">
-            <Link className="link" to={`/category`}>
+            <Link className="link" to={`/reviews`}>
               All
             </Link>
        </button>
@@ -42,7 +42,7 @@ const CategoriesSelect = () => {
             return (
             <li key={category.slug}>
               <button className="category-button">
-                <Link className="link" to={`/category/${category.slug}`}>
+                <Link className="link" to={`/reviews/category/${category.slug}`}>
                   {categoryNameModifier(category.slug)}
                 </Link>
               </button>

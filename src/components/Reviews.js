@@ -1,4 +1,4 @@
-import "./Reviews.css";
+import "../css/Reviews.css";
 import { useState, useEffect } from "react";
 import { getReviews } from "../utils/apiCalls";
 import { useParams, Link } from "react-router-dom";
@@ -25,9 +25,9 @@ const Reviews = () => {
     <main>
       <h2>User Reviews</h2>
       <h3>Sort by:</h3>
-      <Link to={`/category/${category}/created_at`}><button>Newest</button></Link>
-      <Link to={`/category/${category}/comment_count`}><button>Comment Count</button></Link>
-      <Link to={`/category/${category}/votes`}><button>Rating</button></Link>
+      <Link to={`/reviews/category/${category}/created_at`}><button>Newest</button></Link>
+      <Link to={`/reviews/category/${category}/comment_count`}><button>Comment Count</button></Link>
+      <Link to={`/reviews/category/${category}/votes`}><button>Rating</button></Link>
       <ul className="reviews">
         {reviews.map((review) => {
           return (

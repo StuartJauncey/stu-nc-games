@@ -10,11 +10,11 @@ const HomePage = () => {
     <section>
        <h2>Welcome to the <i>Board Game Zone!</i></h2>
        <h3 className="page-description">The BGZ is the place to be to review your favourite (and least favourite!) board games and discuss them with your fellow BGZ members.</h3>
-       <h3>Please log in to get started!</h3>
+       <h3 className="please-login">Please log in to get started!</h3>
        <section className="user-profile">
          <h2 className="username">{user.username}</h2>
          <img className="user-image" src={user.img_url} alt={user.username} />
-         <button className="login-button"><Link className="link" to="/category" >Login!</Link></button>
+         <button className="login-button"><Link className="link" to="/reviews" >Login!</Link></button>
        </section>
     </section>
    

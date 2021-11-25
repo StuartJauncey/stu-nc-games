@@ -1,4 +1,4 @@
-import "./Comments.css"
+import "../css/Comments.css"
 import dateModifier from "../utils/functions/dateModifier"
 import { deleteCommentByCommentId } from "../utils/apiCalls"
 import { UserContext } from "../contexts/UserContext"

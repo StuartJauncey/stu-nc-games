@@ -1,4 +1,4 @@
-import "./SingleReview.css"
+import "../css/SingleReview.css"
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getCommentsByReviewId, getReviewById, postCommentByReviewId } from "../utils/apiCalls";
