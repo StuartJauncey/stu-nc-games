@@ -18,7 +18,6 @@ export const getReviews = (category, sort_by) => {
     params: { category, sort_by }
   })
   .then((res) => {
-    console.log(res);
     return res.data.reviews
   })
 }
@@ -43,7 +42,6 @@ export const patchRatingByReviewId = (id, voteChange) => {
   return gamesAPI
   .patch(`/reviews/${id}`, { inc_votes: voteChange })
   .then((res) => {
-    console.log(res);
     return res.data.review
   })
 }

@@ -13,11 +13,24 @@ const SingleReview = () => {
   const [review, setReview] = useState({});
   const { user } = useContext(UserContext);
   const [comment, setComment] = useState("");
+  const [isError, setError] = useState(false);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    getReviewById(review_id).then(review => {
-      setReview(review);
-    })
+    getReviewById(review_id)
+      .then(review => {
+        setError(false);
+        setLoading(false);
+        setReview(review);
+      })
+      .catch((err) => {
+        setLoading(false);
+        if (err.response.status === 404) {
+          setError("Review does not exist!");
+        } else {
+          setError("Unknown failure.")
+        }
+      });
   }, [review_id]);
 
   useEffect(() => {
@@ -41,6 +54,9 @@ const SingleReview = () => {
   }
 
   const { title, owner, review_body, votes } = review;
+
+  if (isLoading) return <h2>Loading...</h2>
+  if (isError) return <h2>{isError}</h2>
   
   return (
     <main className="single-review">
