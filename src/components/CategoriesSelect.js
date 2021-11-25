@@ -7,13 +7,27 @@ import categoryNameModifier from "../utils/functions/categoryNameModifier";
 const CategoriesSelect = () => {
 
   const [categories, setCategories] = useState([]);
+  const [isError, setError] = useState(false);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     getCategories()
     .then((categoriesReceived) => {
+      setError(false);
+      setLoading(false);
       setCategories(categoriesReceived);
     })
+    .catch((err) => {
+      if (err.response.status === 400) {
+        setError("Category does not exist!");
+      } else {
+        setError("Unknown failure.")
+      }
+    })
   }, []);
+
+  if (isLoading) return <h2>Loading...</h2>
+  if (isError) return <h2>{isError}</h2>
 
   return (
     <nav className="navbar">
