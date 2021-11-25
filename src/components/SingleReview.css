@@ -21,11 +21,11 @@
   margin: 0 80px;
 }
 
-.single-review-votes {
+.single-review-rating {
   grid-area: votes;
 }
 
-.likes-section {
+.rating-section {
   display: grid;
   justify-content: center;
 }
@@ -44,8 +44,4 @@
 
 .single-review-comments {
   grid-area: comments;
-}
-
-.comment-card {
-  border: solid 1px black;
 }

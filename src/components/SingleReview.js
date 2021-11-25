@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { getCommentsByReviewId, getReviewById, postCommentByReviewId } from "../utils/apiCalls";
 import { UserContext } from "../contexts/UserContext";
 import CommentCard from "./CommentCard";
-import ReviewLiker from "./ReviewRater";
+import ReviewRater from "./ReviewRater";
 
 const SingleReview = () => {
 
@@ -28,13 +28,16 @@ const SingleReview = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(review_id, user.username, comment);
-    postCommentByReviewId(review_id, user.username, comment);
+    postCommentByReviewId(review_id, user.username, comment)
+    .then((commentReceived) =>
+      setComments((currentComments) => {
+      return [...currentComments, commentReceived];
+    }))
+    
   }
 
   const handleChange = (event) => {
     setComment(event.target.value);
-    console.log(comment);
   }
 
   const { title, owner, review_body, votes } = review;
@@ -43,8 +46,8 @@ const SingleReview = () => {
     <main className="single-review">
       <h3 className="single-review-title">Review of {title} <br/> by {owner}</h3>
       <h3 className="single-review-body">{review_body}</h3>
-      <h3 className="single-review-votes">
-        <ReviewLiker review_id={review_id} rating={votes}/>
+      <h3 className="single-review-rating">
+        <ReviewRater review_id={review_id} rating={votes}/>
       </h3>
       <section className="single-review-comments">
         <form className="add-comment-form" onSubmit={handleSubmit}>
@@ -54,7 +57,7 @@ const SingleReview = () => {
         </form>
         {comments.map((comment) => {
           return (
-            <CommentCard key={comment.comment_id} {...comment} />
+            <CommentCard comments={comments} setComments={setComments} key={comment.comment_id} {...comment} />
           )
         })}
       </section>

@@ -1,0 +1,30 @@
+.comment-card {
+  background-color: hsl(0, 0%, 75%, 85%);
+  color: black;
+  width: 90vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 15% 15% 60% 10%;
+  grid-template-areas: "author date body votes";
+}
+
+.comment-author {
+  grid-area: author;
+}
+
+.comment-date {
+  grid-area: date;
+}
+
+.comment-body {
+  grid-area: body;
+  text-align: left;
+}
+
+.comment-votes {
+  grid-area: votes;
+}
+
+.delete-comment-button:hover {
+  background-color: red;
+}

@@ -51,6 +51,10 @@
   align-self: center;
 }
 
+.review-body:hover {
+  color: blue;
+}
+
 .review-votes {
   grid-area: votes;
   font-size: 20px;

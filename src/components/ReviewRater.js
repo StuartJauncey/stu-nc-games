@@ -17,7 +17,7 @@ const ReviewLiker = ({ review_id, rating }) => {
   }
 
   return (
-    <section className="Rating-section">
+    <section className="rating-section">
       Review Rating: {rating + ratingChange}
       <button className="like-button" onClick={handleClickAdd}>
         Like

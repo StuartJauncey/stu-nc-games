@@ -21,10 +21,10 @@ const ReviewCard = ({
     <section className="review-card">
       <h3 className="review-title">{title}</h3>
       <h3 className="review-creator">{owner}</h3>
+      <img className="review-image" src={review_img_url} alt={title} />
       <Link className="link" to={`/reviews/${review_id}`}>
-        <img className="review-image" src={review_img_url} alt={title} />
+        <h4 className="review-body">{reviewSnipper(review_body)}</h4>
       </Link>
-      <h4 className="review-body">{reviewSnipper(review_body)}</h4>
       <h3 className="review-votes">Rating: {votes}</h3>
       <h3 className="review-comment-count">Comment Count: {comment_count}</h3>
       <h3 className="review-date"> Created on: {dateModifier(created_at)}</h3>
