@@ -20,7 +20,7 @@ const CategoriesSelect = () => {
        <div className="categories-header">
        <h2>Select a Category</h2>
        <button className="all-category-button">
-            <Link className="link" to={`/category/all`}>
+            <Link className="link" to={`/category`}>
               All
             </Link>
        </button>

@@ -22,7 +22,7 @@ const SingleReview = () => {
 
   useEffect(() => {
     getCommentsByReviewId(review_id).then(comments => {
-      setComments(comments);
+      if (comments) setComments(comments);
     })
   }, [review_id])
 
@@ -50,16 +50,16 @@ const SingleReview = () => {
         <ReviewRater review_id={review_id} rating={votes}/>
       </h3>
       <section className="single-review-comments">
-        <form className="add-comment-form" onSubmit={handleSubmit}>
-          <label htmlFor="add-comment">Add Comment as {user.username} </label>
-          <input id="add-comment" name="item-name" type="text" value={comment} onChange={handleChange} required/>
-          <button type="submit">Add Comment</button>
-        </form>
         {comments.map((comment) => {
           return (
             <CommentCard comments={comments} setComments={setComments} key={comment.comment_id} {...comment} />
           )
         })}
+        <form className="add-comment-form" onSubmit={handleSubmit}>
+          <label htmlFor="add-comment">Add Comment as {user.username} </label>
+          <input id="add-comment" name="item-name" type="text" value={comment} onChange={handleChange} required/>
+          <button type="submit">Add Comment</button>
+        </form>
       </section>
     </main>
   )

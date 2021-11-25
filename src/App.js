@@ -14,9 +14,10 @@ function App() {
         <Title />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          
-          <Route path={`/category`} element={<><CategoriesSelect /><Reviews /></>} />
-          <Route path={`category/:category`} element={<><CategoriesSelect /><Reviews /></>} />
+          <Route path={`category`} element={<><CategoriesSelect /><Reviews /></>} />
+          <Route path={`category/:category/`} element={<><CategoriesSelect /><Reviews /></>} />
+          <Route path={`category/undefined/:sort_by`} element={<><CategoriesSelect /><Reviews /></>} />
+          <Route path={`category/:category/:sort_by`} element={<><CategoriesSelect /><Reviews /></>} />
           <Route path={`/reviews/:review_id`} element={<SingleReview />} />
         </Routes>
       </div>

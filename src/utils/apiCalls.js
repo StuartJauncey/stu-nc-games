@@ -12,20 +12,13 @@ export const getCategories = () => {
   })
 }
 
-export const getReviews = (category) => {
+export const getReviews = (category, sort_by) => {
   return gamesAPI
   .get("/reviews", {
-    params: { category }
+    params: { category, sort_by }
   })
   .then((res) => {
-    return res.data.reviews
-  })
-}
-
-export const getReviewsByCategory = (category) => {
-  return gamesAPI
-  .get(`/reviews/?category=${category}`)
-  .then((res) => {
+    console.log(res);
     return res.data.reviews
   })
 }
