@@ -37,16 +37,14 @@ const SingleReview = () => {
     console.log(comment);
   }
 
-  const { title, owner, review_body, review_img_url, votes } = review;
+  const { title, owner, review_body, votes } = review;
   
   return (
     <main className="single-review">
-      <h3 className="single-review-title">{title}</h3>
-      <h3 className="single-review-owner">{owner}</h3>
+      <h3 className="single-review-title">Review of {title} <br/> by {owner}</h3>
       <h3 className="single-review-body">{review_body}</h3>
-      <img className="single-review-image" src={review_img_url} alt={title} />
       <h3 className="single-review-votes">
-        <ReviewLiker likes={votes}/>
+        <ReviewLiker review_id={review_id} likes={votes}/>
       </h3>
       <section className="single-review-comments">
         <form className="add-comment-form" onSubmit={handleSubmit}>

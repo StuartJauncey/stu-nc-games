@@ -1,62 +1,70 @@
 .reviews {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  margin: auto;
   list-style-type: none;
   padding: 0;
+  width: 80vw;
 }
 
 .review-card {
-  height: 300px;
-  width: 400px;
+  background-color: hsl(0, 0%, 75%, 80%);
+  color: black;
+  height: 240px;
+  width: 100%;
   border: 2px solid black;
+  border-radius: 20px;
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 20% 30% 17% 17% 17%;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 80px 80px 80px;
   grid-template-areas: 
-    "title creator"
-    "image body"
-    "image votes"
-    "image comment-count"
-    "image date";
-}
-
-.review-card:hover {
-  background-color: tan;
+    "title creator body image"
+    "date votes body image"
+    "date comment-count body image";
+  margin: 10px 0;
 }
 
 .review-title {
   grid-area: title;
+  font-size: 20px;
+  align-self: center;
 }
 
 .review-creator {
   grid-area: creator;
+  font-size: 20px;
+  align-self: center;
 }
 
 .review-image {
   grid-area: image;
-  border: solid black 1px;
   height: 150px;
   width: 150px;
   justify-self: center;
   align-self: center;
+  padding-top: 50px;
 }
 
 .review-body {
-  font-size: 12px;
+  font-size: 18px;
   grid-area: body;
+  align-self: center;
 }
 
 .review-votes {
   grid-area: votes;
-  font-size: 14px;
+  font-size: 20px;
+  align-self: center;
 }
 
 .review-comment-count {
   grid-area: comment-count;
+  font-size: 20px;
+  align-self: center;
 }
 
 .review-date {
   grid-area: date;
-  font-size: 14px;
+  font-size: 20px;
+  align-self: center;
 }

@@ -1,12 +1,11 @@
 .single-review {
   display: grid;
-  grid-template-rows: 150px 150px 150px 150px 150px;
+  grid-template-rows: 150px 150px 150px 150px;
   grid-template-columns: 50% 50%;
   grid-template-areas: 
-    "title body"
-    "author body"
-    "image body"
-    "votes body"
+    "title title"
+    "body body"
+    "votes votes"
     "comments comments";
   height: 100vh;
   width: 100vw;
@@ -14,20 +13,12 @@
 
 .single-review-title {
   grid-area: title;
-}
-
-.single-review-owner {
-  grid-area: author;
+  font-size: 28px;
 }
 
 .single-review-body {
   grid-area: body;
-}
-
-.single-review-image {
-  grid-area: image;
-  width: 100px;
-  height: 100px;
+  margin: 0 80px;
 }
 
 .single-review-votes {

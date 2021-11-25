@@ -14,8 +14,8 @@ function App() {
         <Title />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/reviews" element={<CategoriesSelect />} />
-          <Route path={`category`} element={<><CategoriesSelect /><Reviews /></>} />
+          
+          <Route path={`/category`} element={<><CategoriesSelect /><Reviews /></>} />
           <Route path={`category/:category`} element={<><CategoriesSelect /><Reviews /></>} />
           <Route path={`/reviews/:review_id`} element={<SingleReview />} />
         </Routes>

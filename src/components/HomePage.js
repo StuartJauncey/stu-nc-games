@@ -14,7 +14,7 @@ const HomePage = () => {
        <section className="user-profile">
          <h2 className="username">{user.username}</h2>
          <img className="user-image" src={user.img_url} alt={user.username} />
-         <button className="login-button"><Link className="link" to="/reviews" >Login!</Link></button>
+         <button className="login-button"><Link className="link" to="/category" >Login!</Link></button>
        </section>
     </section>
    

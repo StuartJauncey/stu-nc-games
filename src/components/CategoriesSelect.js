@@ -9,25 +9,28 @@ const CategoriesSelect = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    getCategories().then((categoriesReceived) => {
+    getCategories()
+    .then((categoriesReceived) => {
       setCategories(categoriesReceived);
     })
   }, []);
 
   return (
     <nav className="navbar">
+       <div className="categories-header">
        <h2>Select a Category</h2>
-       <ul className="categories">
-          <button className="category-button">
-            <Link to={`/category/all`}>
+       <button className="category-button all-category-button">
+            <Link className="link" to={`/category/all`}>
               All
             </Link>
-          </button>
+       </button>
+       </div>
+       <ul className="categories">
           {categories.map(category => {
             return (
             <li key={category.slug}>
               <button className="category-button">
-                <Link to={`/category/${category.slug}`}>
+                <Link className="link" to={`/category/${category.slug}`}>
                   {categoryNameModifier(category.slug)}
                 </Link>
               </button>
