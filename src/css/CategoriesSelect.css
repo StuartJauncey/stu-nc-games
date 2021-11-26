@@ -4,6 +4,10 @@
   margin: auto;
 }
 
+.category-select-title {
+  font-size: 28px;
+}
+
 .categories {
   list-style-type: none;
   padding: 0;
@@ -46,20 +50,20 @@
 @media only screen and (max-width: 600px) {
   .navbar {
     height: 150px;
-    width: 360px;
+    width: 380px;
     margin: 0px auto 120px auto;
   }
   .categories {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .all-category-button {
     height: 60px;
-    width: 120px;
+    width: 100px;
   }
   .category-button {
     height: 60px;
-    width: 120px;
+    width: 100px;
   }
 }

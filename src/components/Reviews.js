@@ -22,7 +22,7 @@ const Reviews = () => {
   }, [category, sort_by])
 
   return (
-    <main>
+    <main className="reviews-section">
       <section className="sort-by-section">
         <h2>Sort by:</h2>
         <Link to={`/reviews/category/${category}/created_at`}><button className="sort-by-button">Newest</button></Link>

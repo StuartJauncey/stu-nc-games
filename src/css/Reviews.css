@@ -1,7 +1,11 @@
+.reviews-section {
+  margin-bottom: 40px;
+}
+
 .sort-by-section {
   display: grid;
   grid-template-columns: 120px 120px 120px 120px;
-  margin: auto;
+  margin: 20px auto auto auto;
   width: 480px;
 }
 
@@ -11,14 +15,15 @@
   text-decoration: none;
   padding: 10px;
   font-size: 16px;
-  background-color: hsl(195, 93%, 79%, 90%);
+  background-color: hsl(135, 93%, 79%, 90%);
   color: black;
   border: solid 2px black;
   border-radius: 30px;
 }
 
 .sort-by-button:hover {
-  background-color: hsl(195, 93%, 89%, 100%);
+  background-color: hsl(135, 93%, 89%, 100%);
+  cursor: pointer;
 }
 
 .reviews {
@@ -31,7 +36,9 @@
 }
 
 .review-card {
-  background-color: hsl(0, 0%, 100%, 80%);
+  background-color: hsl(240, 61%, 70%, 90%);
+  border: 0.1px solid hsl(240, 61%, 50%, 100%);
+  box-shadow: 0px 0px 20px hsl(240, 61%, 50%, 100%);
   color: black;
   height: 160px;
   width: 100%;
@@ -47,19 +54,19 @@
   padding: 3px 10px;
 }
 
+.review-card:hover {
+  background-color: hsl(240, 61%, 70%, 100%);
+}
+
 .review-title {
   grid-area: title;
   font-size: 20px;
   align-self: center;
   padding: 5px;
-  margin: 5px;
-}
-
-.review-creator {
-  grid-area: creator;
-  align-self: center;
-  padding: 5px;
-  margin: 5px;
+  margin: 20px 5px 5px 5px;
+  background-color: hsl(240, 61%, 70%, 100%);
+  border: 0.1px solid hsl(240, 61%, 50%, 100%);
+  box-shadow: 0px 0px 18px hsl(240, 61%, 40%, 100%);
 }
 
 .review-image {
@@ -69,34 +76,49 @@
   align-self: center;
   justify-self: center;
   border-radius: 10px;
+  border: 0.1px solid hsl(240, 61%, 50%, 100%);
+  box-shadow: 0px 0px 18px hsl(240, 61%, 40%, 100%);
 }
 
 .review-body {
-  margin-top: 20px;
+  height: 150px;
+  min-width: 150px;
+  margin: 0 50px;
+  align-self: center;
+  justify-self: center;
   font-size: medium;
   grid-area: body;
-}
-
-.review-body:hover {
-  color: blue;
+  border-radius: 10px;
+  background-color: hsl(240, 61%, 70%, 100%);
+  border: 0.1px solid hsl(240, 61%, 50%, 100%);
+  box-shadow: 0px 0px 18px hsl(240, 61%, 40%, 100%);
 }
 
 .review-votes {
   grid-area: votes;
   font-size: 20px;
   align-self: center;
+  background-color: hsl(240, 61%, 70%, 100%);
+  border: 0.1px solid hsl(240, 61%, 50%, 100%);
+  box-shadow: 0px 0px 18px hsl(240, 61%, 40%, 100%);
 }
 
 .review-comment-count {
   grid-area: comment-count;
   font-size: 20px;
   align-self: center;
+  background-color: hsl(240, 61%, 70%, 100%);
+  border: 0.1px solid hsl(240, 61%, 50%, 100%);
+  box-shadow: 0px 0px 18px hsl(240, 61%, 40%, 100%);
 }
 
 .review-date {
   grid-area: date;
   font-size: 20px;
   align-self: center;
+  background-color: hsl(240, 61%, 70%, 100%);
+  border: 0.1px solid hsl(240, 61%, 50%, 100%);
+  box-shadow: 0px 0px 18px hsl(240, 61%, 40%, 100%);
 }
 
 @media only screen and (max-width: 1000px) {
@@ -113,7 +135,7 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .review-card {
     height: 240px;
     display: table;
@@ -121,7 +143,26 @@
   }
   .review-image {
     display: block;
-    margin: auto;
+    margin: 20px auto 20px auto;
+  }
+  .review-body {
+    height: auto;
+    font-size: large;
+  }
+  .review-votes {
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+  }
+  .review-comment-count {
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+  }
+  .review-date {
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
   }
   .sort-by-section {
     grid-template-columns: 105px 105px 105px 105px;

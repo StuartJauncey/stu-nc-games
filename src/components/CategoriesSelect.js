@@ -31,7 +31,7 @@ const CategoriesSelect = () => {
 
   return (
     <nav className="navbar">
-       <h2>Select a Review Category</h2>
+       <h2 className="category-select-title">Select a Review Category</h2>
        <ul className="categories">
         <button className="all-category-button">
           <Link className="link" to={`/reviews`}>
