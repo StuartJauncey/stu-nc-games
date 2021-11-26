@@ -63,7 +63,7 @@ const SingleReview = () => {
       <h3 className="single-review-title">Review of {title} <br/> by {owner}</h3>
       <h3 className="single-review-body">{review_body}</h3>
       <h3 className="single-review-rating">
-        <ReviewRater review_id={review_id} rating={votes}/>
+        <ReviewRater owner={owner} review_id={review_id} rating={votes}/>
       </h3>
       <section className="single-review-comments">
         {comments.map((comment) => {
@@ -72,9 +72,9 @@ const SingleReview = () => {
           )
         })}
         <form className="add-comment-form" onSubmit={handleSubmit} autoComplete="off">
-          <label htmlFor="add-comment">Add Comment as {user.username} </label>
-          <input id="add-comment" name="item-name" type="text" value={comment} onChange={handleChange} required/>
-          <button type="submit">Add Comment</button>
+          <label htmlFor="add-comment">Add comment as {user.username} </label>
+          <input className="input-comment" placeholder="Your comment... be nice!" id="add-comment" name="item-name" type="text" value={comment} onChange={handleChange} required/>
+          <button className="add-comment-button" type="submit">Add Comment</button>
         </form>
       </section>
     </main>

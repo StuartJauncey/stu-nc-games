@@ -7,6 +7,7 @@
   display: grid;
   grid-template-columns: 15% 15% 60% 10%;
   grid-template-areas: "author date body votes";
+  padding: 0 10px;
 }
 
 .comment-author {
@@ -28,4 +29,11 @@
 
 .delete-comment-button:hover {
   background-color: red;
+}
+
+@media only screen and (max-width: 600px) {
+  .comment-card {
+    display: table;
+    width: 80vw;
+  } 
 }

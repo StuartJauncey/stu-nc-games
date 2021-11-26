@@ -55,10 +55,31 @@
   background-color: crimson;
 }
 
-.add-comment-form {
-  color: grey;
-}
-
 .single-review-comments {
   grid-area: comments;
 }
+
+.add-comment-form {
+  color: grey;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 10px auto;
+}
+
+.input-comment {
+  width: 80%;
+  margin: 3px auto;
+}
+
+.input-comment::placeholder {
+  text-align: center;
+}
+
+.add-comment-button {
+  width: 120px;
+  margin: 5px auto;
+  font-family: News Cycle;
+  font-size: 15px;
+}
+

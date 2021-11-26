@@ -84,7 +84,7 @@ body {
 
 .login-button:hover {
   background-color: hsl(195, 93%, 89%, 100%);
-  font-size: 21px;
+  font-size: 19px;
 }
 
 .link {
@@ -101,10 +101,13 @@ body {
     font-size: 18px;
   }
   .user-profile {
-    margin-top: 45px;
+    margin: 45px auto;
     display: flex;
     flex-direction: column;
     width: 250px;
+  }
+  .please-login {
+    font-size: 24px;
   }
   .user-image {
     width: 50%;

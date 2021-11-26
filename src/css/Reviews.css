@@ -173,6 +173,24 @@
   }
 }
 
+@media only screen and (max-width: 430px) {
+  .sort-by-section {
+    display: table;
+    width: 90vw;
+  }
+  .sort-by-button {
+    width: 30vw;
+    font-size: 14px;
+  }
+  .reviews {
+    width: 300px;
+  }
+  .review-card {
+    margin: 20px 0 0 0;
+    width: fit-content;
+  }
+}
+
 @media only screen and (min-width: 1100px) {
   .review-body {
     font-size: large;
