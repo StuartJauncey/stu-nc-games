@@ -184,8 +184,14 @@ body {
   .please-login {
     font-size: 24px;
   }
+  .user-profile {
+    width: 250px;
+    height: 180px;
+    display: table;
+    margin-bottom: 20px;
+  }
   .user-image {
-    width: 50%;
+    width: 160px;
     grid-area: picture;
     margin: 10px auto;
     border-radius: 30px;

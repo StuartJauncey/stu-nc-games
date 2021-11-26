@@ -14,15 +14,14 @@
 .single-review-title {
   grid-area: title;
   font-size: 28px;
-  margin: 0;
   color: black;
   background-color: hsl(135, 93%, 79%, 90%);
   border: 0.1px solid hsl(135, 93%, 79%, 90%);
   box-shadow: 0px 0px 20px hsl(240, 61%, 50%, 100%);
   border-radius: 10px;
   width: fit-content;
-  margin: auto;
-  padding: 10px 30px;
+  margin: 20px auto auto auto;
+  padding: 8px 28px;
 }
 
 .single-review-body {
