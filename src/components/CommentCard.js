@@ -33,11 +33,11 @@ const CommentCard = ({
     <section className="comment-card">
       <h4 className="comment-author">{author}</h4>
       <h4 className="comment-body">
-        {body}
+        {`${body} `}
         <button className="delete-comment-button" disabled={currentUser} onClick={handleClick}>X</button>
       </h4>
       <h4 className="comment-date">{dateModifier(created_at)}</h4>
-      <h4 className="comment-votes">Votes: {votes}</h4>
+      <h4 className="comment-votes">Rating: {votes}</h4>
     </section>
     
   )

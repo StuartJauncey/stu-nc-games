@@ -1,8 +1,9 @@
 .comment-card {
-  background-color: hsl(0, 0%, 100%, 85%);
+  background-color: hsl(195, 93%, 79%, 90%);
+  border-radius: 5px;
   color: black;
   width: 90vw;
-  margin: auto;
+  margin: 5px auto;
   display: grid;
   grid-template-columns: 15% 15% 60% 10%;
   grid-template-areas: "author date body votes";

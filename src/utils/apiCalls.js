@@ -18,6 +18,7 @@ export const getReviews = (category, sort_by) => {
     params: { category, sort_by }
   })
   .then((res) => {
+    console.log(res);
     return res.data.reviews
   })
 }

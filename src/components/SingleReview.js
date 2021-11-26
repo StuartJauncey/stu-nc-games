@@ -46,7 +46,7 @@ const SingleReview = () => {
       setComments((currentComments) => {
       return [...currentComments, commentReceived];
     }))
-    
+    setComment("");
   }
 
   const handleChange = (event) => {

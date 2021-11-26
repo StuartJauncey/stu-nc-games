@@ -28,6 +28,8 @@ Link to hosted version:
 
 - Install dependencies using: ``` npm install```
 
+- To host locally then run ``npm start``
+
 ## Minimum versions required
 
 - ```axios``` v^0.24.0

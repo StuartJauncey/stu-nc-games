@@ -1,24 +1,40 @@
 .single-review {
   display: grid;
-  grid-template-rows: 150px 150px 150px 150px;
+  grid-template-rows: auto auto 100px auto;
   grid-template-columns: 50% 50%;
   grid-template-areas: 
     "title title"
     "body body"
     "votes votes"
     "comments comments";
-  height: 100vh;
-  width: 100vw;
+  width: 90vw;
+  margin: auto;
 }
 
 .single-review-title {
   grid-area: title;
   font-size: 28px;
+  margin: 0;
+  color: black;
+  background-color: hsl(135, 93%, 79%, 90%);
+  border: 0.1px solid hsl(135, 93%, 79%, 90%);
+  box-shadow: 0px 0px 20px hsl(240, 61%, 50%, 100%);
+  border-radius: 10px;
+  width: fit-content;
+  margin: auto;
+  padding: 10px 30px;
 }
 
 .single-review-body {
   grid-area: body;
-  margin: 0 80px;
+  padding: 30px 20px;
+  margin: 20px auto 0 auto;
+  color: black;
+  background-color: hsl(240, 61%, 70%, 90%);;
+  border: 0.1px solid hsl(240, 61%, 70%, 90%);;
+  box-shadow: 0px 0px 20px hsl(240, 61%, 50%, 100%);
+  border-radius: 10px;
+  width: fit-content;
 }
 
 .single-review-rating {
@@ -28,6 +44,7 @@
 .rating-section {
   display: grid;
   justify-content: center;
+  margin: 0;
 }
 
 .like-button {
