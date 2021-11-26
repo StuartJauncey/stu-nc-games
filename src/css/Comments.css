@@ -35,5 +35,6 @@
   .comment-card {
     display: table;
     width: 80vw;
+    padding: 0 10px;
   } 
 }

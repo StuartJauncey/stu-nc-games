@@ -55,7 +55,7 @@
 }
 
 .review-card:hover {
-  background-color: hsl(240, 61%, 70%, 100%);
+  background-color: hsl(240, 61%, 75%, 100%);
 }
 
 .review-title {
@@ -64,7 +64,7 @@
   align-self: center;
   padding: 5px;
   margin: 20px 5px 5px 5px;
-  background-color: hsl(240, 61%, 70%, 100%);
+  background-color: hsl(195, 93%, 72%, 90%);
   border: 0.1px solid hsl(240, 61%, 50%, 100%);
   box-shadow: 0px 0px 18px hsl(240, 61%, 40%, 100%);
 }
@@ -89,7 +89,7 @@
   font-size: medium;
   grid-area: body;
   border-radius: 10px;
-  background-color: hsl(240, 61%, 70%, 100%);
+  background-color: hsl(195, 93%, 72%, 90%);
   border: 0.1px solid hsl(240, 61%, 50%, 100%);
   box-shadow: 0px 0px 18px hsl(240, 61%, 40%, 100%);
 }
@@ -98,7 +98,7 @@
   grid-area: votes;
   font-size: 20px;
   align-self: center;
-  background-color: hsl(240, 61%, 70%, 100%);
+  background-color: hsl(135, 93%, 79%, 90%);
   border: 0.1px solid hsl(240, 61%, 50%, 100%);
   box-shadow: 0px 0px 18px hsl(240, 61%, 40%, 100%);
   width: 90%;
@@ -109,7 +109,7 @@
   grid-area: comment-count;
   font-size: 20px;
   align-self: center;
-  background-color: hsl(240, 61%, 70%, 100%);
+  background-color: hsl(135, 93%, 79%, 90%);
   border: 0.1px solid hsl(240, 61%, 50%, 100%);
   box-shadow: 0px 0px 18px hsl(240, 61%, 40%, 100%);
   width: 90%;
@@ -120,7 +120,7 @@
   grid-area: date;
   font-size: 20px;
   align-self: center;
-  background-color: hsl(240, 61%, 70%, 100%);
+  background-color: hsl(135, 93%, 79%, 90%);
   border: 0.1px solid hsl(240, 61%, 50%, 100%);
   box-shadow: 0px 0px 18px hsl(240, 61%, 40%, 100%);
   width: 90%;
@@ -156,18 +156,15 @@
     font-size: large;
   }
   .review-votes {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto;
     width: 180px;
   }
   .review-comment-count {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto;
     width: 180px;
   }
   .review-date {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto;
     width: 180px;
   }
   .sort-by-section {
