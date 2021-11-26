@@ -25,8 +25,8 @@ body {
 }
 
 .title-bar {
-  display: grid;
-  grid-template-columns: 75% 20%;
+  display: block;
+  width: 100vw;
 }
 
 .home-profile {
@@ -34,16 +34,16 @@ body {
   grid-template-columns: 50% 50%;
   grid-template-rows: 80% 20%;
   grid-template-areas: "user picture" "button button";
-  justify-content: center;
   align-content: center;
-  height: 70px;
+  height: 90px;
   width: 180px;
-  margin: auto;
+  margin: 8px auto auto auto;
   padding-bottom: 12px;
   background-color: hsl(240, 61%, 70%, 100%);
   border: 0.1px solid hsl(240, 61%, 50%, 100%);
   box-shadow: 0px 0px 18px hsl(240, 61%, 40%, 100%);
   border-radius: 10px;
+  justify-self: right;
 }
 
 .home-username {
@@ -56,7 +56,7 @@ body {
 }
 
 .home-image {
-  width: 60%;
+  width: 80%;
   grid-area: picture;
   margin: auto;
   border-radius: 10px;
@@ -150,7 +150,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   .main-title {
-    font-size: 20px;
+    font-size: 25px;
   }
   .title-bar {
     display: block;
@@ -158,14 +158,8 @@ body {
   .page-description {
     font-size: 18px;
   }
-  .user-profile {
-    margin: 45px auto;
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-  }
   .home-profile {
-    padding: 5px;
+    padding: 5px 0;
     height: 53px;
     width: 160px;
     margin: 10px auto 0 auto;
@@ -177,8 +171,8 @@ body {
     justify-self: center;
   }
   .home-image {
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
   }
   .home-button {
     width: 80px;
