@@ -22,7 +22,60 @@ body {
   color: hsl(135, 93%, 89%, 100%);
   font-size: 38px;
   font-family: "Press Start 2P";
+}
 
+.title-bar {
+  display: grid;
+  grid-template-columns: 75% 20%;
+}
+
+.home-profile {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 80% 20%;
+  grid-template-areas: "user picture" "button button";
+  justify-content: center;
+  align-content: center;
+  height: 70px;
+  width: 180px;
+  margin: auto;
+  padding-bottom: 12px;
+  background-color: hsl(240, 61%, 70%, 100%);
+  border: 0.1px solid hsl(240, 61%, 50%, 100%);
+  box-shadow: 0px 0px 18px hsl(240, 61%, 40%, 100%);
+  border-radius: 10px;
+}
+
+.home-username {
+  color: black;
+  grid-area: user;
+  margin: auto;
+  font-size: 16px;
+  justify-self: center;
+  padding-left: 5px;
+}
+
+.home-image {
+  width: 60%;
+  grid-area: picture;
+  margin: auto;
+  border-radius: 10px;
+  padding-left: 5px;
+}
+
+.home-button {
+  grid-area: button;
+  background-color: hsl(195, 93%, 79%, 90%);
+  width: 70px;
+  height: 20px;
+  margin: auto;
+  font-size: 142x;
+  border-radius: 30px;
+}
+
+.login-button:hover {
+  background-color: hsl(195, 93%, 89%, 100%);
+  font-size: 19px;
 }
 
 .main-title:hover {

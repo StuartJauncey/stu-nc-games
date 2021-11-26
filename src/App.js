@@ -11,14 +11,13 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Title />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path={`reviews`} element={<><CategoriesSelect /><Reviews /></>} />
-          <Route path={`reviews/category/:category/`} element={<><CategoriesSelect /><Reviews /></>} />
-          <Route path={`reviews/category/undefined/:sort_by`} element={<><CategoriesSelect /><Reviews /></>} />
-          <Route path={`reviews/category/:category/:sort_by`} element={<><CategoriesSelect /><Reviews /></>} />
-          <Route path={`/reviews/:review_id`} element={<SingleReview />} />
+          <Route path={`reviews`} element={<><Title /><CategoriesSelect /><Reviews /></>} />
+          <Route path={`reviews/category/:category/`} element={<><Title /><CategoriesSelect /><Reviews /></>} />
+          <Route path={`reviews/category/undefined/:sort_by`} element={<><Title /><CategoriesSelect /><Reviews /></>} />
+          <Route path={`reviews/category/:category/:sort_by`} element={<><Title /><CategoriesSelect /><Reviews /></>} />
+          <Route path={`/reviews/:review_id`} element={<><Title /><SingleReview /></>} />
         </Routes>
       </div>
     </BrowserRouter>

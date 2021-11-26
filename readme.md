@@ -1,7 +1,7 @@
 # Board Game Zone
 
 Link to hosted version: 
-## https://
+## https://boardgamezone.netlify.app
 
 ---
 

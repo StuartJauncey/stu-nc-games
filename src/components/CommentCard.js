@@ -1,5 +1,6 @@
 import "../css/Comments.css"
 import dateModifier from "../utils/functions/dateModifier"
+import dateTimeModifier from "../utils/functions/dateTimeModifier"
 import { deleteCommentByCommentId } from "../utils/apiCalls"
 import { UserContext } from "../contexts/UserContext"
 import { useContext } from "react"
@@ -36,7 +37,7 @@ const CommentCard = ({
         {`${body} `}
         <button className="delete-comment-button" disabled={currentUser} onClick={handleClick}>X</button>
       </h4>
-      <h4 className="comment-date">{dateModifier(created_at)}</h4>
+      <h4 className="comment-date">{dateModifier(created_at)} <br /> {dateTimeModifier(created_at)}</h4>
       <h4 className="comment-votes">Rating: {votes}</h4>
     </section>
     
