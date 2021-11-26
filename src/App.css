@@ -150,7 +150,10 @@ body {
 
 @media only screen and (max-width: 600px) {
   .main-title {
-    font-size: 30px;
+    font-size: 20px;
+  }
+  .title-bar {
+    display: block;
   }
   .page-description {
     font-size: 18px;
@@ -160,6 +163,29 @@ body {
     display: flex;
     flex-direction: column;
     width: 250px;
+  }
+  .home-profile {
+    padding: 5px;
+    height: 53px;
+    width: 160px;
+    margin: 10px auto 0 auto;
+    display: table;
+  }
+  .home-username {
+    padding: 0;
+    font-size: 17px;
+    justify-self: center;
+  }
+  .home-image {
+    height: 100px;
+    width: 100px;
+  }
+  .home-button {
+    width: 80px;
+    height: 25px;
+    margin: auto;
+    font-size: 14px;
+    border-radius: 30px;
   }
   .please-login {
     font-size: 24px;
