@@ -14,7 +14,7 @@ Link to hosted version:
 
 
 ### You can find the backend repository on GitHub here -
-```https://github.com/StuartJauncey/stu-nc-games```
+```https://github.com/StuartJauncey/nc_games```
 
 ### You can view the hosted version of the backend here -
 ```https://stu-nc-games.herokuapp.com/api```
