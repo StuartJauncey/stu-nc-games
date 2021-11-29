@@ -24,7 +24,7 @@ const ReviewLiker = ({ review_id, rating, owner }) => {
   const handleClickUndo = () => {
     setVoted(false);
     setRatingChange((prevRating) => prevRating - ratingChange);
-    patchRatingByReviewId(review_id, ratingChange);
+    patchRatingByReviewId(review_id, -ratingChange);
   }
   
   const isDisabled = owner === user.username;
