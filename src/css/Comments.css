@@ -5,8 +5,8 @@
   width: 90vw;
   margin: 5px auto;
   display: grid;
-  grid-template-columns: 15% 15% 60% 10%;
-  grid-template-areas: "author date body votes";
+  grid-template-columns: 15% 15% 50% 10% 10%;
+  grid-template-areas: "author date body vote-rating votes";
   padding: 0 10px;
 }
 
@@ -25,6 +25,10 @@
 
 .comment-votes {
   grid-area: votes;
+}
+
+.comment-voter {
+  grid-area: vote-rating;
 }
 
 .delete-comment-button:hover {

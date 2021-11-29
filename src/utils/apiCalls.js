@@ -61,3 +61,11 @@ export const deleteCommentByCommentId = (id) => {
     return res.data.comment
   })
 }
+
+export const patchCommentVotesByCommentId = (id, voteChange) => {
+  return gamesAPI
+  .patch(`comments/${id}`, { inc_votes: voteChange })
+  .then((res) => {
+    return res.data.comment
+  })
+}

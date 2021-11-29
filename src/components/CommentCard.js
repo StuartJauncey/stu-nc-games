@@ -4,6 +4,7 @@ import dateTimeModifier from "../utils/functions/dateTimeModifier"
 import { deleteCommentByCommentId } from "../utils/apiCalls"
 import { UserContext } from "../contexts/UserContext"
 import { useContext } from "react"
+import CommentRater from "./CommentRater"
 
 const CommentCard = ({
   comment_id,
@@ -39,6 +40,7 @@ const CommentCard = ({
       </h4>
       <h4 className="comment-date">{dateModifier(created_at)} <br /> {dateTimeModifier(created_at)}</h4>
       <h4 className="comment-votes">Rating: {votes}</h4>
+      <CommentRater rating={votes} comment_id={comment_id}/>
     </section>
     
   )
